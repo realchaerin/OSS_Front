@@ -6,6 +6,8 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.*;
 
+import java.lang.annotation.Documented;
+
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
@@ -15,8 +17,5 @@ import lombok.*;
 public class Member {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    private String memberEmail;
-    private String memberPassword;
-    private String memberName;
+    private String name;
 }

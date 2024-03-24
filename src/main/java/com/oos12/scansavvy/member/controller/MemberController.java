@@ -1,22 +1,20 @@
 package com.oos12.scansavvy.member.controller;
 
 import com.oos12.scansavvy.member.dto.MemberDTO;
+import com.oos12.scansavvy.member.service.MemberService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.*;
 
-@Controller
+@RestController
+@RequiredArgsConstructor
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class MemberController {
-    @GetMapping("/member/save")
-    public String saveForm(){
-        return "save";
-    }
+    private final MemberService memberService;
 
-    @PostMapping("/member/save")
-    public String save(@ModelAttribute MemberDTO memberDTO){
-        System.out.println("MemberController.save");
-        System.out.println("memberDTO = " + memberDTO);
-        return "index";
+    @GetMapping("/login/{name}")
+    public String findByID(@PathVariable String name){
+        System.out.println("test");
+        return null;
     }
 }
