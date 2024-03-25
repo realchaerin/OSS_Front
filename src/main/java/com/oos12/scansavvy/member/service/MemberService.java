@@ -1,15 +1,14 @@
 package com.oos12.scansavvy.member.service;
 
-import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Service;
+import com.oos12.scansavvy.member.entity.Member;
 
 import java.util.List;
 
-@RequiredArgsConstructor
-@Service
-public class MemberService {
-    public List<String> getMember(String name){
-        System.out.println("test");
-        return null;
-    }
+public interface MemberService {
+    List<Member> findAll();
+    Member findByEmail(String email);
+    Member findByPhone(String phone);
+    List<Member> findAllByOrderByNameDesc();
+    Member saveOrUpdateMember(Member member);
+    void deleteMemberById(String id);
 }

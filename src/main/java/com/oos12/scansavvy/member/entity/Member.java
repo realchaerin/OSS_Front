@@ -16,6 +16,22 @@ import java.lang.annotation.Documented;
 
 public class Member {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private String id;
+    @Setter
+    @Getter
     private String name;
+    private String email;
+    private String password;
+    private String phone;
+
+    @Override
+    public String toString(){
+        return "Member{" +
+                "id='" + id + '\'' +
+                ", name='" + name +'\'' +
+                ", email='" + email +'\'' +
+                ", password=" + password +
+                ", phone=" + phone +
+                '}';
+    }
 }

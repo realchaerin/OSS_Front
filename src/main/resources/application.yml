@@ -7,10 +7,14 @@ spring:
     mongodb:
       host: localhost
       port: 27017
-      database: scansavvy
+      database: ScanSavvy
       authentication-database: admin
       username: root
       password: 4788
+
+
+  main:
+    allow-bean-definition-overriding: true
 
 logging:
   level:
