@@ -29,7 +29,7 @@ public class MemberController {
         return ObjectMapperUtils.map(memberService.findByEmail(email), MemberDTO.class);
     }
 
-    @GetMapping(value = "/byPhone/{phone")
+    @GetMapping(value = "/byPhone/{phone}")
     public MemberDTO getMemberByPhone(@PathVariable("phone") String phone){
         return ObjectMapperUtils.map(memberService.findByPhone(phone), MemberDTO.class);
     }

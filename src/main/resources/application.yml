@@ -3,18 +3,21 @@ server:
   port: 8080
 #JPA
 spring:
-  data:
-    mongodb:
-      host: localhost
-      port: 27017
-      database: ScanSavvy
-      authentication-database: admin
+#  data:
+#    mongodb:
+#      uri: mongodb://localhost:27017/test
+#      username: root
+#      password: 4788
+    datasource:
+      driver-class-name: com.mongodb.jdbc.MongoDriver
       username: root
       password: 4788
+      hikari:
+        jdbc-url: jdbc:mongodb://localhost:27017/ScanSavvy
+    main:
+      allow-bean-definition-overriding: true
 
 
-  main:
-    allow-bean-definition-overriding: true
 
 logging:
   level:
