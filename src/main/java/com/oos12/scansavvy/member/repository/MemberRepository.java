@@ -1,7 +1,6 @@
 package com.oos12.scansavvy.member.repository;
 
-import com.oos12.scansavvy.member.entity.Member;
-import org.springframework.data.mongodb.repository.MongoRepository;
+import com.oos12.scansavvy.member.model.Member;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
 import java.util.List;

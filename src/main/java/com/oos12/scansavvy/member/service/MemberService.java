@@ -1,6 +1,6 @@
 package com.oos12.scansavvy.member.service;
 
-import com.oos12.scansavvy.member.entity.Member;
+import com.oos12.scansavvy.member.model.Member;
 
 import java.util.List;
 

@@ -1,6 +1,6 @@
 package com.oos12.scansavvy.member.service;
 
-import com.oos12.scansavvy.member.entity.Member;
+import com.oos12.scansavvy.member.model.Member;
 import com.oos12.scansavvy.member.repository.MemberRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
