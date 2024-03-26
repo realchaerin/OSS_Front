@@ -14,7 +14,7 @@ import java.util.Objects;
 @Service
 public class SequenceGeneratorService {
 
-    private MongoOperations mongoOperations;
+    final private MongoOperations mongoOperations;
 
     @Autowired
     public SequenceGeneratorService(MongoOperations mongoOperations){

@@ -22,6 +22,9 @@ public class MemberController {
     private SequenceGeneratorService sequenceGeneratorService;
 
     @GetMapping(value = "/")
+//    public String hello(){
+//        return "hello";
+//    }
     public List<MemberDTO> getAllMembers(){
         return ObjectMapperUtils.mapAll(memberService.findAll(), MemberDTO.class);
     }
