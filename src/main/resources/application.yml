@@ -13,7 +13,7 @@ spring:
       username: root
       password: 4788
       hikari:
-        jdbc-url: jdbc:mongodb://localhost:27017/ScanSavvy
+        jdbc-url: jdbc:mongodb://localhost:27017/scansavvy
     main:
       allow-bean-definition-overriding: true
 
