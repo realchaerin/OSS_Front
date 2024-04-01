@@ -22,13 +22,14 @@ public class MemberController {
     private SequenceGeneratorService sequenceGeneratorService;
 
     @GetMapping(value = "/")
-//    public String hello(){
-//        return "hello";
-//    }
     public List<MemberDTO> getAllMembers(){
         return ObjectMapperUtils.mapAll(memberService.findAll(), MemberDTO.class);
     }
 
+    @PostMapping(value = "/login")
+    public MemberDTO loginOrSignIn(@RequestBody MemberDTO memberDTO){
+        return ObjectMapperUtils.map(memberService.loginOrSignIn(memberDTO.getEmail(), memberDTO.getPassword()), MemberDTO.class);
+    }
     @GetMapping(value = "/byEmail/{email}")
     public MemberDTO getMemberByEmail(@PathVariable("email") String email){
         return ObjectMapperUtils.map(memberService.findByEmail(email), MemberDTO.class);
